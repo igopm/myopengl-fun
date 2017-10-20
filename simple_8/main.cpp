@@ -33,7 +33,7 @@ const GLfloat vertices[] = {
 //==================================================================================================================
 const GLuint indices[] = {  // Note that we start from 0!
                             0, 1, 3 // First Triangle
-                            , 1, 2, 3  // Second Triangle
+                            //                            , 1, 2, 3  // Second Triangle
                          };
 //==================================================================================================================
 int main(){
@@ -128,9 +128,9 @@ int main(){
     }
     //==============================================================================================
     // DElet all res.
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
-    glDeleteBuffers(1, &EBO);
+    //    glDeleteVertexArrays(1, &VAO);
+    //    glDeleteBuffers(1, &VBO);
+    //    glDeleteBuffers(1, &EBO);
     // Terminate GLFW, clearing any resources allocated by GLFW.
     glfwTerminate();
     //==============================================================================================
