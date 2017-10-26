@@ -26,7 +26,7 @@ find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 # Threads
-find_package(Threads)
+#find_package(Threads)
 
 # Build SOIL library
 add_subdirectory(Soil)
@@ -41,6 +41,6 @@ add_subdirectory(MotokoGL)
 #add_subdirectory(simple_5)
 #add_subdirectory(simple_6)
 #add_subdirectory(simple_7)
-#add_subdirectory(simple_8)
+add_subdirectory(simple_8)
 #add_subdirectory(my_opencv)
 add_subdirectory(my_demo3)

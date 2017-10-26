@@ -20,11 +20,11 @@ const char* nameWindow = "my_demo3";
 //=====================================================================================================
 const char* setImage ="common_textures/container2.jpg";
 
-const char* setVertexBG ="shaders/bg.vert";
-const char* setFragmentBG ="shaders/bg.frag";
+const char* setVertexBG = "shaders/bg.vert";
+const char* setFragmentBG = "shaders/bg.frag";
 
-const char* setVertexCub ="shaders/cub.vert";
-const char* setFragmentCub ="shaders/cub.frag";
+const char* setVertexCub = "shaders/cub.vert";
+const char* setFragmentCub = "shaders/cub.frag";
 //=====================================================================================================
 // Square, with EBO
 GLfloat verticesBG[] = {
@@ -191,7 +191,7 @@ int main(){
     while (!glfwWindowShouldClose(window))
     {
         glfwPollEvents();
-        // Get frame
+        //        // Get frame
         cap.read(frame);
         cap.retrieve(frame);
         texBG.updateImage(frame);
@@ -205,7 +205,7 @@ int main(){
         }
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        // ====Draw background
+        //        // ====Draw background
         glDisable(GL_DEPTH_TEST);
         shaderBG.Use();
         texBG.bind(0);
@@ -218,7 +218,7 @@ int main(){
         //===================================================
         glEnable(GL_DEPTH_TEST);
         shaderCub.Use();
-        glBindTexture(GL_TEXTURE_2D, texture);
+        //        glBindTexture(GL_TEXTURE_2D, texture);
         glUniform1i(glGetUniformLocation(shaderCub.Program, "ourTexture"), 0);
         // Create transformations
         glm::mat4 model;
